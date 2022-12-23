@@ -10,10 +10,16 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
+import { CompletedTodoComponent } from './completed-todo/completed-todo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent,
+    AddTodoComponent,
+    CompletedTodoComponent
   ],
   imports: [
     BrowserModule,
