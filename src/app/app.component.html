@@ -21,8 +21,8 @@
 
     <div *ngFor="let item of items; let index = index;" class="item-row">
         <div class="checkbox-item">
-          <mat-checkbox class="checkbox" [(ngModel)]="checked" color="warn"></mat-checkbox>
-          <div class="list-item">{{ item }}</div>
+          <mat-checkbox class="checkbox" [(ngModel)]="item.checked" color="warn"></mat-checkbox>
+          <div class="list-item">{{ item.description }}</div>
         </div>
         <div class="delete-button">
           <button mat-button 
