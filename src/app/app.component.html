@@ -1,0 +1,36 @@
+<div class="header">
+  <img src="./assets/images/ewok_icon.png">
+  <h1 class="header-title">Endor Celebration</h1>
+  <img src="./assets/images/ewok_icon.png">
+</div>
+
+<mat-card>
+  <mat-card-header class="card-header">Celebration To-Do List</mat-card-header>
+  <mat-card-content>
+    <p>Add To-Do</p>
+    <input
+      [(ngModel)]="newTask"
+      value=""
+      class="input-box"
+      type="text"
+      placeholder="Add a to-do item"/>
+
+    <div class="add-button">
+      <button mat-button class="add-button" (click)="addItem()">ADD TASK</button>
+    </div>
+
+    <div *ngFor="let item of items; let index = index;" class="item-row">
+        <div class="checkbox-item">
+          <mat-checkbox class="checkbox" [(ngModel)]="checked" color="warn"></mat-checkbox>
+          <div class="list-item">{{ item }}</div>
+        </div>
+        <div class="delete-button">
+          <button mat-button 
+          class="delete-button"
+          (click)="deleteTask(index)" 
+          value="Delete">DELETE TASK</button>
+        </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
